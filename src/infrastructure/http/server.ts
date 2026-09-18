@@ -5,5 +5,5 @@ export async function buildServer() {
     const app = Fastify();
     app.post("/orders", OrdersController.create);
     app.delete("/orders/:id", OrdersController.delete);
-    await app;
+    return app;
 }
